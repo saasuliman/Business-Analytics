@@ -1,0 +1,20 @@
+/* Query 1 - query used for first insight */
+
+SELECT Customer.FirstName, count(*) FROM Customer JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId where Customer.FirstName ='Daan' and Customer.LastName='Peeters'
+
+
+/* Query 2 - query used for second insight */
+
+select Artist.Name, Quantity from Invoice  JOIN InvoiceLine on Invoice.InvoiceId = InvoiceLine.InvoiceId join Track on InvoiceLine.TrackId = Track.TrackId join Album on Track.AlbumId = Album.AlbumId join Artist on Album.ArtistId = Artist.ArtistId where InvoiceDate between  '2010-04-01 00:00:00' and '2010-04-15 00:00:00'  GROUP by Artist.Name
+
+
+/* Query 3 - query used for third insight */
+select Name, count (*) from (Select * from (SELECT * FROM Album
+Join Artist on Album.ArtistId = Artist.ArtistId)  order by Name) group by Name
+
+
+/* Query 4 - query used for fourth insight */
+
+select sum(Total), BillingCity from Invoice 
+join InvoiceLine on Invoice.InvoiceId = InvoiceLine.InvoiceId 
+where Invoice.BillingCountry='Germany' group by BillingCity
