@@ -7,7 +7,7 @@ This repo contains the assignments delivered for BA nanodegree
 Analyze real life data from the New York Stock Exchange
 1) complete your own data analysis and create a presentation to share your findings, 
 2) develop a dashboard for a Profit and Loss Statement, 
-and 3) create a Financial Forecasting Model using three scenarios. 
+3) create a Financial Forecasting Model using three scenarios. 
 
 # Data Visualization
 visualize real airport data using Tableau
